@@ -1,0 +1,5 @@
+Variable,High mean,Low mean,p-value,Significant
+Age,33.2712,25.7101,0.0013,**
+% Intuitive,0.7975,0.6962,0.1171,ns
+P(stay Anal.),0.2007,0.4939,0.0,***
+Log-likelihood,63.0445,90.7757,0.0,***

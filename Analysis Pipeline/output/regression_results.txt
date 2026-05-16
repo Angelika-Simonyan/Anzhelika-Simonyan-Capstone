@@ -1,0 +1,86 @@
+MIND VS CLOCK — REGRESSION RESULTS
+============================================================
+
+MODEL 1 — Main Effects
+                Mixed Linear Model Regression Results
+=====================================================================
+Model:                 MixedLM      Dependent Variable:      is_shift
+No. Observations:      7951         Method:                  REML    
+No. Groups:            197          Scale:                   0.0980  
+Min. group size:       34           Log-Likelihood:          inf     
+Max. group size:       117          Converged:               Yes     
+Mean group size:       40.4                                          
+---------------------------------------------------------------------
+                Coef.   Std.Err.    z    P>|z|    [0.025     0.975]  
+---------------------------------------------------------------------
+Intercept        0.000 331513.315  0.000 1.000 -649754.158 649754.158
+pressure_high    0.074      0.025  2.906 0.004       0.024      0.123
+complexity_high  0.010      0.014  0.692 0.489      -0.018      0.037
+trial_num_norm  -0.038      0.014 -2.699 0.007      -0.066     -0.010
+Group Var        0.000                                               
+=====================================================================
+
+
+MODEL 2 — With Interaction
+                       Mixed Linear Model Regression Results
+===================================================================================
+Model:                       MixedLM          Dependent Variable:          is_shift
+No. Observations:            7951             Method:                      REML    
+No. Groups:                  197              Scale:                       0.0976  
+Min. group size:             34               Log-Likelihood:              inf     
+Max. group size:             117              Converged:                   Yes     
+Mean group size:             40.4                                                  
+-----------------------------------------------------------------------------------
+                              Coef.   Std.Err.    z    P>|z|    [0.025     0.975]  
+-----------------------------------------------------------------------------------
+Intercept                      0.000 330847.936  0.000 1.000 -648450.038 648450.038
+pressure_high                  0.034      0.026  1.287 0.198      -0.018      0.085
+complexity_high               -0.031      0.016 -1.945 0.052      -0.061      0.000
+pressure_high:complexity_high  0.081      0.014  5.744 0.000       0.053      0.108
+trial_num_norm                -0.039      0.014 -2.725 0.006      -0.066     -0.011
+Group Var                      0.000                                               
+===================================================================================
+
+
+MODEL 3 — Full Model
+                 Mixed Linear Model Regression Results
+========================================================================
+Model:                  MixedLM      Dependent Variable:      is_shift  
+No. Observations:       7951         Method:                  REML      
+No. Groups:             197          Scale:                   0.1001    
+Min. group size:        34           Log-Likelihood:          -2217.2634
+Max. group size:        117          Converged:               Yes       
+Mean group size:        40.4                                            
+------------------------------------------------------------------------
+                              Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+------------------------------------------------------------------------
+Intercept                      0.083    0.025  3.361 0.001  0.034  0.131
+pressure_high                  0.031    0.026  1.172 0.241 -0.021  0.083
+complexity_high               -0.032    0.016 -2.016 0.044 -0.063 -0.001
+pressure_high:complexity_high  0.080    0.014  5.668 0.000  0.053  0.108
+trial_num_norm                -0.037    0.014 -2.600 0.009 -0.065 -0.009
+stress_num                     0.003    0.004  0.670 0.503 -0.006  0.011
+sleep_good                     0.013    0.010  1.259 0.208 -0.007  0.032
+Group Var                      0.002    0.002                           
+========================================================================
+
+
+KEY COEFFICIENTS
+                               Coefficient  Std Error  z-value  p-value Significant
+Intercept                           0.0827     0.0246   3.3609   0.0008         ***
+pressure_high                       0.0309     0.0264   1.1724   0.2410            
+complexity_high                    -0.0319     0.0158  -2.0165   0.0438           *
+pressure_high:complexity_high       0.0804     0.0142   5.6676   0.0000         ***
+trial_num_norm                     -0.0371     0.0143  -2.6002   0.0093          **
+stress_num                          0.0029     0.0043   0.6705   0.5026            
+sleep_good                          0.0126     0.0100   1.2587   0.2082            
+Group Var                           0.0215     0.0048   4.5125   0.0000         ***
+
+AUC-ROC: 0.6922
+
+INDIVIDUAL DIFFERENCES
+         Variable  High mean  Low mean  p-value Significant
+0             Age    33.2712   25.7101   0.0013          **
+1     % Intuitive     0.7975    0.6962   0.1171          ns
+2   P(stay Anal.)     0.2007    0.4939   0.0000         ***
+3  Log-likelihood    63.0445   90.7757   0.0000         ***
